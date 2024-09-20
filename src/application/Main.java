@@ -14,7 +14,5 @@ public class Main {
         System.out.println(obj);
     }
     
-    public void methods() {
-        // Implementação de métodos adicionais pode ser adicionada aqui
-    }
+   
 }
