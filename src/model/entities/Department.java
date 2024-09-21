@@ -2,11 +2,11 @@ package model.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
-
+//Essa classe de Department(Departamento) ela implementa Serializable(torna os objetos capazes de serem transportado para base)
 public class Department implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	
+	//id e nome do usuario
 	private Integer id;
 	private String name;
 	

@@ -4,15 +4,14 @@ import java.util.List;
 
 import model.dao.SellerDao;
 import model.entities.Seller;
-
+//essa classe servira para realizar operações no banco de dados para os objetos Seller(vendedores)
 public class SellerDaoJDBC implements SellerDao {
-
+	
 	@Override
 	public void insert(Seller sel) {
 		// TODO Auto-generated method stub
 
 	}
-
 	@Override
 	public void update(Seller sel) {
 		// TODO Auto-generated method stub
