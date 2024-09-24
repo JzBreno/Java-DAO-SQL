@@ -38,20 +38,26 @@ public class SellerDaoJDBC implements SellerDao {
 		
 
 	}
-
+	//buscando por id
 	@Override
 	public Seller findById(Integer id) {
+		//nossa statement dinamica que recebera a query e incremento no nosso programa
 		PreparedStatement st = null;
+		//nosso resultado sera guardado nesse resultset
 		ResultSet rs = null;
+		//try - catch para capiturar possiveis exeções
 		try{
-			
-			st = this.conn.prepareStatement(
+			//nossa query de findby
+			st = conn.prepareStatement(
 					"select sel.*, dep.Name as DepName "
 					+ "from seller sel inner join department dep "
 					+ "on sel.departmentId = dep.Id "
 					+ "where sel.id = ?");
+			//setando nosso valor que sera filtrado no WHERE
 			st.setInt(1, id);
+			//rs recebe a execução da nossa query
 			rs = st.executeQuery();
+			//se ouver uma proxima linha ele 
 			if(rs.next()) {
 				Department dep = new Department();
 				dep.setId(rs.getInt("DepartmentId"));
